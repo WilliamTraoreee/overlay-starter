@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  background: transparent;
+}
+
+.chat {
+  flex: 1;
+  height: 100vh;
+  background: transparent;
+  width: 50%;
+}
+
+.messages {
+  padding: 24px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.messages .message {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  animation: appearMsg 0.5s ease-out;
+}
+.messages .message p {
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.messages .message section {
+  padding: 16px;
+  background: white;
+  color: black;
+  border-radius: 16px;
+  text-align: right;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.infos {
+  flex: 1;
+  width: 100%;
+  background: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 16px;
+}
+.infos p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+.infos p span {
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.alerts {
+  background: red;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.alerts .alert {
+  background: white;
+  display: inline-flex;
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 1;
+  animation: appearAlert 0.5s ease-out;
+}
+.alerts .alert.alert-hide {
+  animation: hideAlert 0.5s ease-out;
+}
+
+@keyframes appearMsg {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes appearAlert {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+@keyframes hideAlert {
+  to {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
